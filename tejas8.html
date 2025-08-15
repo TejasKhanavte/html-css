@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:#d0d4d8;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            background: #f1e7e7;
+            margin: 40px auto;
+            padding: 30px 40px;
+            border-radius: 12px;
+            max-width: 420px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.13);
+        }
+        label {
+            display: block;
+            margin: 10px 0 4px;
+            font-weight: 600;
+        }
+        input[type="email"],
+        input[type="phone"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 12px;
+            border: 1px solid #bdbdbd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="radio"] {
+            margin-right: 6px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        button[type="submit"] {
+            background-color: #1976d2;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: #1356a2;
+        }
+        video {
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+        }
+    </style>
+</head>
+<body>
+    <form id="mainForm" action="/submit.php">
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email" required>
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="enter phone" pattern="[0-9]{10,15}" required>
+        </div>
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" placeholder="enter date" required>
+        </div>
+        <div>
+            <label for="comment">Comment</label>
+            <textarea name="comment" id="comment" rows="4" placeholder="enter a comment"></textarea>
+        </div>
+        <div class="radio-group">
+            <label>Class:</label>
+            <input type="radio" name="class" id="11" value="11">
+            <label for="11">11</label>
+            <input type="radio" name="class" id="12" value="12">
+            <label for="12">12</label>
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>select gender</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+        <div>
+            <video src="tejas.mp4" autoplay muted controls height="200"></video>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <script>
+        document.getElementById('mainForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent actual submit
+            // Validate phone (example)
+            const phone = document.getElementById('phone').value;
+            if(!/^\d{10,15}$/.test(phone)) {
+                alert('Please enter a valid phone number (10-15 digits).');
+                return;
+            }
+            // Validate class radio
+            if(!document.querySelector('input[name="class"]:checked')) {
+                alert('Please select a class (11 or 12).');
+                return;
+            }
+            // Validate gender
+            const gender = document.getElementById('gender').value;
+            if(!gender) {
+                alert('Please select a gender.');
+                return;
+            }
+            alert('Form submitted successfully!');
+            // Optionally, you can submit the form via AJAX here or reset the form
+            // this.submit();
+        });
+    </script>
+</body>
+</html>
