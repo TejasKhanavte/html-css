@@ -133,3 +133,6 @@ body{
 @media (prefers-reduced-motion: reduce){
   *{transition:none !important;animation:none !important}
 }
+
+.photo-wrapper{display:flex;justify-content:center;margin-top:1rem}
+.photo-wrapper img{width:240px;height:240px;border-radius:50%;object-fit:cover;border:2px solid var(--border);box-shadow:var(--shadow);background:var(--card)}
