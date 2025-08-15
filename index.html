@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tejas Khanavate | Web Developer</title>
+    <meta name="description" content="Portfolio of Tejas Khanavate — Web Developer. Projects, experience, and contact information.">
+    <meta name="theme-color" content="#0ea5e9">
+    <meta property="og:title" content="Tejas Khanavate | Web Developer">
+    <meta property="og:description" content="Portfolio of Tejas Khanavate — Web Developer. Projects, experience, and contact information.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/favicon.svg">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">TK</a>
+        <nav class="nav" aria-label="Primary">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul id="nav-list" class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#photos">Photo</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <span class="icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Tejas Khanavate</h1>
+            <p class="subtitle">Web Developer</p>
+            <p class="lead">I am a web developer.</p>
+            <div class="cta-group">
+              <a class="btn btn-primary" href="#contact">Contact Me</a>
+              <a class="btn btn-soft" href="assets/Tejas_Khanavate_Resume.pdf" download>Download Resume</a>
+            </div>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <div class="avatar">TK</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            I am a web developer focused on delivering high-quality user interfaces and performant web applications.
+            I enjoy working with modern JavaScript frameworks, clean design systems, and accessible UX.
+          </p>
+          <div class="skills">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">React</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Responsive Design</span>
+            <span class="chip">Accessibility</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section alt">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="grid projects-grid">
+            <article class="card">
+              <div class="card-body">
+                <h3>Project One</h3>
+                <p>A responsive web app demonstrating a clean component architecture and state management.</p>
+                <div class="stack">
+                  <span class="chip">React</span>
+                  <span class="chip">Vite</span>
+                  <span class="chip">CSS Modules</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a class="link" href="#" aria-label="Live demo for Project One">Live Demo</a>
+                <a class="link" href="#" aria-label="Source code for Project One">Source</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-body">
+                <h3>Project Two</h3>
+                <p>An API-driven dashboard with charts, search, and pagination with accessible interactions.</p>
+                <div class="stack">
+                  <span class="chip">Next.js</span>
+                  <span class="chip">TypeScript</span>
+                  <span class="chip">Tailwind CSS</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a class="link" href="#" aria-label="Live demo for Project Two">Live Demo</a>
+                <a class="link" href="#" aria-label="Source code for Project Two">Source</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-body">
+                <h3>Project Three</h3>
+                <p>A mobile-first portfolio template with dark mode, optimized images, and semantic HTML.</p>
+                <div class="stack">
+                  <span class="chip">HTML</span>
+                  <span class="chip">SCSS</span>
+                  <span class="chip">Alpine.js</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a class="link" href="#" aria-label="Live demo for Project Three">Live Demo</a>
+                <a class="link" href="#" aria-label="Source code for Project Three">Source</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="photos" class="section">
+        <div class="container">
+          <h2>Photo</h2>
+          <div class="photo-wrapper">
+            <img src="assets/profile.jpg" alt="Photo of Tejas Khanavate" onerror="this.onerror=null;this.src='assets/profile.svg'">
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="container">
+          <h2>Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>Web Developer</h3>
+                <p class="muted">Company Name • 2023 — Present</p>
+                <ul class="bullets">
+                  <li>Built responsive UI components and improved performance.</li>
+                  <li>Collaborated with designers and backend engineers.</li>
+                  <li>Maintained accessibility and code quality standards.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h3>Frontend Intern</h3>
+                <p class="muted">Company Name • 2022 — 2023</p>
+                <ul class="bullets">
+                  <li>Contributed to feature development and testing.</li>
+                  <li>Implemented design system tokens and themes.</li>
+                  <li>Wrote documentation and improved developer tooling.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt">
+        <div class="container">
+          <h2>Contact</h2>
+          <div class="contact-grid">
+            <div>
+              <p class="lead">Interested in working together or have a question?</p>
+              <div class="contact-list">
+                <a class="contact-item" href="mailto:tejas@example.com">tejas@example.com</a>
+                <a class="contact-item" href="tel:+910000000000">+91 00000 00000</a>
+                <span class="contact-item">Location: Your City, Country</span>
+              </div>
+              <div class="social">
+                <a class="icon-link" href="#" aria-label="GitHub">GitHub</a>
+                <a class="icon-link" href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a class="icon-link" href="#" aria-label="Twitter">Twitter</a>
+              </div>
+            </div>
+            <form class="contact-form" action="mailto:tejas@example.com" method="post" enctype="text/plain">
+              <label>
+                <span>Name</span>
+                <input name="name" type="text" placeholder="Your name" required>
+              </label>
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" placeholder="you@example.com" required>
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" placeholder="How can I help?" required></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Tejas Khanavate</span>
+        <a class="link" href="#">Back to top</a>
+      </div>
+    </footer>
+  </body>
+</html>
